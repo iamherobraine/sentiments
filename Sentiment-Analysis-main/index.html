@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis of Lockdown in USA during COVID-19</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sentiment Analysis of Lockdown in USA during COVID-19</h1>
+    </header>
+    <main>
+        <section id="data-input">
+            <h2>Enter a Twitter Search Query:</h2>
+            <input type="text" id="twitter-query" placeholder="e.g., #COVIDLockdownUSA">
+            <button id="analyze-button">Analyze</button>
+        </section>
+        <section id="sentiment-results">
+            <h2>Sentiment Analysis Results:</h2>
+            <div id="sentiment-text">Sentiment: <span id="sentiment-value">Neutral</span></div>
+            <div id="positive-tweets">Positive Tweets: <span id="positive-count">0</span></div>
+            <div id="negative-tweets">Negative Tweets: <span id="negative-count">0</span></div>
+            <div id="neutral-tweets">Neutral Tweets: <span id="neutral-count">0</span></div>
+        </section>
+    </main>
+    <script>
+        // Add your JavaScript code here to handle user interactions and perform sentiment analysis
+        const analyzeButton = document.getElementById("analyze-button");
+
+        analyzeButton.addEventListener("click", () => {
+            const twitterQuery = document.getElementById("twitter-query").value;
+            
+            // Make an API request to your sentiment analysis backend with the Twitter query
+            // Update the sentiment results based on the API response
+            // Example:
+            // fetch(`/api/sentiment?query=${encodeURIComponent(twitterQuery)}`)
+            //     .then(response => response.json())
+            //     .then(data => {
+            //         document.getElementById("sentiment-value").textContent = data.sentiment;
+            //         document.getElementById("positive-count").textContent = data.positiveCount;
+            //         document.getElementById("negative-count").textContent = data.negativeCount;
+            //         document.getElementById("neutral-count").textContent = data.neutralCount;
+            //     })
+            //     .catch(error => console.error(error));
+        });
+    </script>
+</body>
+</html>
